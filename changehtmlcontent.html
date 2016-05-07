@@ -72,7 +72,7 @@
                 Apple</span> <br /> <br /><span class="description">Once the largest company on the planet</span></p>
         </div>
         
-        <div class="green">
+        <div class="green" id="mic">
             <p><span class="title">
                 MicroSoft</span> <br /><br /> <span class="description">Also once the largest company on the planet</span></p>
         </div>
@@ -80,6 +80,8 @@
         <button id="button1">Change Facebook content</button>
         
         <button id="button2">Change Apple content</button>
+        
+        <button id="button3">Change Microsoft style</button>
         
         <script>
             document.getElementById("button1").onclick = function () {
@@ -89,6 +91,17 @@
             document.getElementById("button2").onclick = function () {
                 document.getElementById("app").innerHTML = 
                     "<ul><li>Mercedes</li><li>BMW</li><li>Audi</li></ul>"
+            }
+            
+            document.getElementById("button3").onclick = function () {
+                
+                document.getElementById("mic").style.width = "400px"
+                
+                document.getElementById("mic").style.color = "#dddd3a"
+                
+                document.getElementById("mic").style.fontFamily = "monospace"
+                
+                document.getElementById("mic").style.fontSize = "1.1em"
             }
         </script>
     </body>
