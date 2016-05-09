@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Arrays</title>
+    </head>
+    <body>
+        <p id="first">Javascript.</p>
+        <p id="second">Hey there</p>
+        
+        <script >
+            var shoppingList = [" bread" , " eggs", " milk"];
+            
+            document.getElementById("first").innerHTML = shoppingList;
+            
+            document.getElementById("second").innerHTML += "<br/>" + shoppingList[2];
+            
+            delete shoppingList[0];
+            
+            document.getElementById("second").innerHTML += "<br/>" + shoppingList[0];
+            
+            shoppingList.splice(0, 1);
+            
+            document.getElementById("second").innerHTML += "<br/>" + shoppingList[0];
+            
+            shoppingList.splice(1, 0, " banana");
+            
+            document.getElementById("second").innerHTML += "<br/>" + shoppingList;
+            
+            var myString = "What is the weather like?"
+            var myArray = myString.split(" ")
+            
+            document.getElementById("second").innerHTML += "<br/> " + myArray;
+        </script>
+        
+    </body>
+</html>
