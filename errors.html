@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Erros Handle</title>
+    </head>
+    
+    <body>
+        <p>Your password should contain at least 6 characters, 1 number, and one capital letter</p>
+        
+        <p>Enter Password: <br/><input id="pass" type="password"></p>
+        
+        <p>Re-enter Password: <br/><input id="pass2" type="password"></p>
+        
+        <button onclick="check()" id="subbutton">Submit</button>
+        
+        <script>
+            try{
+                sum(3,4)
+            } catch(err) {
+                window.alert(err.message);
+            }
+            
+            function check() {
+                var password = document.getElementById("pass").value;
+                
+                var password2 = document.getElementById("pass2").value;
+                
+                var errorMessage = "Error with password";
+                
+                var errorState = 0;
+                
+                try {
+                    if(password.length<6) {
+                        errorMessage += "\nPassword to short!";
+                        errorState = 1;
+                    }
+                    if(/[A-Z]/g.test(password) ==false) {
+                        errorMessage += "\nPassword needs a capital letter";
+                        errorState = 1;
+                    }
+                    if(/\d/g.test(password== false)) {
+                        errorMessage += "\nPassword needs at least one number";
+                        errorState = 1;
+                    }
+                    
+                    if(password != password2) {
+                        errorMessage += "\nPasswords do not match";
+                        errorState = 1;
+                    }
+                    
+                    if(errorState == 1) { window.alert(errorMessage);
+                    }
+                    
+                    else {
+                        window.alert("Good password");
+                    }
+                } catch(err) {
+                    window.alert(err);
+                }
+            }
+        
+        </script>
+    </body>
+</html>
