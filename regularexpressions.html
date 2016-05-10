@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Regular Expressions</title>
+    </head>
+    
+    <body>
+        <p id="prac">Javascript</p>
+        <br/>
+        <p>String: <span id="string"></span></p>
+        <p>Pattern:<span id="pattern"></span></p>
+        <p>Result(search):<span id="search"></span></p>
+        <p>Result(match):<span id="match"></span></p>
+        <p>Result(test):<span id="test"></span></p>
+    
+        <script>
+            var str = "Atlanta"
+            var pattern1 = /a/i;
+            var pattern2 = /a/g;
+            var pattern3 = new RegExp("a","g");
+            document.getElementById("prac").innerHTML += str.search(pattern1);
+            
+            document.getElementById("prac").innerHTML += str.search(pattern2);
+            
+            document.getElementById("prac").innerHTML += str.match(pattern1);
+            
+            document.getElementById("prac").innerHTML += str.match(pattern2)
+            
+            window.alert(pattern1.test(str));
+            
+            document.getElementById("string").innerHTML = str;
+            
+            document.getElementById("pattern").innerHTML = pattern2;
+            
+            document.getElementById("search").innerHTML = str.search(pattern2);
+            
+            document.getElementById("match").innerHTML = str.match(pattern2);
+            
+            document.getElementById("test").innerHTML = pattern2.test(str);
+            
+        </script>
+    </body>
+</html>
