@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cookies</title>
+    </head>
+    <body>
+        <p id="one"></p>
+        <script>
+            //data was deleted to show //cookies working
+            //cookie here is an array
+            var cookie = document.cookie.split(";");
+            window.alert(cookie);
+            
+            for (i=0; i<cookie.length; i++) {
+                document.getElementById("one").innerHTML += cookie[i]+"</br>";
+            }
+        </script>
+    </body>
+
+</html>
