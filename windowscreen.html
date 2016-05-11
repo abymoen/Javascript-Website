@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Window and Timer</title>
+        <style>
+            #one{
+                background-color: #dddd3a;  
+            }
+            #two{
+                background-color: #3addd2;  
+            }
+            #three{
+                background-color: #843add;  
+            }
+            #four{
+                background-color: #76dd3a;  
+            }
+            .box {
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="one" class="box">Div1
+        </div>
+        <div id="two" class="box">Div2
+        </div>
+        <div id="three" class="box">Div3
+        </div>
+        <div id="four" class="box">Div4
+        </div>
+        <script>
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            //window.alert(windowHeight);
+            
+            var screenWidth = window.screen.width;
+            //window.alert(screenWidth);
+            
+            var availableHeight = window.screen.availHeight;
+            //window.alert(availableHeight);
+            
+            document.getElementById("one").style.width = window.innerWidth/4 -10 + "px";
+            
+            document.getElementById("one").style.height = window.innerHeight  + "px";
+            
+            document.getElementById("two").style.width = window.innerWidth/4 -10 + "px";
+            
+            document.getElementById("two").style.height = window.innerHeight + "px";
+            
+            document.getElementById("three").style.width = window.innerWidth/4 -10 + "px";
+            
+            document.getElementById("three").style.height = window.innerHeight + "px";
+            
+            document.getElementById("four").style.width = window.innerWidth/4 -10 + "px";
+            
+            document.getElementById("four").style.height = window.innerHeight + "px";
+        </script>
+    </body>
+</html>
